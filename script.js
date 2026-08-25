@@ -20,12 +20,10 @@ async function loadPython() {
 
         resultBox.textContent = "Loading Python... ⏳";
 
-        // Load Pyodide
         pyodide = await loadPyodide();
 
         resultBox.textContent = "Loading game... ⏳";
 
-        // Load game.py
         const response = await fetch("./game.py");
 
         if (!response.ok) {
@@ -37,7 +35,6 @@ async function loadPython() {
 
         const pythonCode = await response.text();
 
-        // Run game.py
         await pyodide.runPythonAsync(pythonCode);
 
         pythonReady = true;
@@ -55,7 +52,6 @@ async function loadPython() {
             "Game failed to load ❌";
 
         console.error(error);
-
     }
 }
 
@@ -66,12 +62,39 @@ async function loadPython() {
 
 function startGame() {
 
-    document.getElementById("start-screen").style.display =
-        "none";
+    const startScreen =
+        document.getElementById("start-screen");
 
-    document.getElementById("game-screen").style.display =
-        "block";
+    const gameScreen =
+        document.getElementById("game-screen");
 
+
+    // Hide start screen
+    startScreen.style.display = "none";
+
+
+    // Show game screen
+    gameScreen.style.display = "flex";
+
+
+    // Fit game inside computer screen
+    gameScreen.style.width =
+        "min(520px, 92vw)";
+
+    gameScreen.style.height =
+        "min(680px, 92vh)";
+
+    gameScreen.style.maxWidth =
+        "92vw";
+
+    gameScreen.style.maxHeight =
+        "92vh";
+
+    gameScreen.style.overflow =
+        "hidden";
+
+    gameScreen.style.boxSizing =
+        "border-box";
 }
 
 
@@ -114,7 +137,9 @@ result = play_game(player_choice)
         pyodide.globals.get("computer_score");
 
 
-    // Player choice
+    // =========================
+    // PLAYER CHOICE
+    // =========================
 
     document.getElementById("player-icon").textContent =
         icons[choice];
@@ -123,7 +148,9 @@ result = play_game(player_choice)
         choice.toUpperCase();
 
 
-    // Computer choice
+    // =========================
+    // COMPUTER CHOICE
+    // =========================
 
     document.getElementById("computer-icon").textContent =
         icons[computerChoice];
@@ -132,13 +159,17 @@ result = play_game(player_choice)
         computerChoice.toUpperCase();
 
 
-    // Result
+    // =========================
+    // RESULT
+    // =========================
 
     document.getElementById("result").textContent =
         result;
 
 
-    // Score
+    // =========================
+    // SCORE
+    // =========================
 
     document.getElementById("player-score").textContent =
         playerScore;
@@ -147,7 +178,9 @@ result = play_game(player_choice)
         computerScore;
 
 
-    // Player wins
+    // =========================
+    // PLAYER WINS
+    // =========================
 
     if (playerScore >= 10) {
 
@@ -170,7 +203,9 @@ player_won()
     }
 
 
-    // Computer wins
+    // =========================
+    // COMPUTER WINS
+    // =========================
 
     if (computerScore >= 10) {
 
@@ -187,7 +222,6 @@ player_won()
 
         return;
     }
-
 }
 
 
@@ -204,7 +238,6 @@ function disableChoices() {
             button.disabled = true;
 
         });
-
 }
 
 
@@ -224,12 +257,16 @@ reset_game()
 `);
 
 
+    // Reset player
+
     document.getElementById("player-icon").textContent =
         "❔";
 
     document.getElementById("player-choice").textContent =
         "-";
 
+
+    // Reset computer
 
     document.getElementById("computer-icon").textContent =
         "❔";
@@ -238,6 +275,8 @@ reset_game()
         "-";
 
 
+    // Reset score
+
     document.getElementById("player-score").textContent =
         "0";
 
@@ -245,13 +284,19 @@ reset_game()
         "0";
 
 
+    // Reset result
+
     document.getElementById("result").textContent =
         "Choose your move! 🎮";
 
 
+    // Reset winner
+
     document.getElementById("final-winner").textContent =
         "";
 
+
+    // Enable buttons
 
     document
         .querySelectorAll(".choices button")
@@ -262,9 +307,10 @@ reset_game()
         });
 
 
+    // Reset button
+
     document.getElementById("try-again").textContent =
         "🔄 TRY AGAIN";
-
 }
 
 
