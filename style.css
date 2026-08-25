@@ -111,6 +111,7 @@ body {
 
 #start-button:hover {
     background: #60a5fa;
+
     transform: scale(1.05);
 }
 
@@ -417,6 +418,7 @@ body {
 
     #game-screen {
         width: 520px;
+
         height: min(92vh, 680px);
     }
 
@@ -437,7 +439,7 @@ body {
 @media (max-width: 500px) {
 
     body {
-        padding: 5px;
+        padding: 8px;
 
         overflow: hidden;
     }
@@ -445,13 +447,13 @@ body {
     #game-screen {
         width: 100%;
 
-        height: 98vh;
+        height: auto;
 
-        max-height: 98vh;
+        max-height: 96vh;
 
-        padding: 10px 8px;
+        padding: 12px 10px;
 
-        border-radius: 16px;
+        border-radius: 18px;
 
         overflow: hidden;
     }
@@ -460,9 +462,9 @@ body {
     /* GAME TITLE */
 
     #game-screen h1 {
-        margin: 0 0 6px;
+        margin: 0 0 8px;
 
-        font-size: 20px;
+        font-size: 21px;
 
         letter-spacing: 1px;
     }
@@ -471,90 +473,200 @@ body {
     /* BATTLE */
 
     .battle {
-        gap: 5px;
+        gap: 7px;
 
-        margin-bottom: 6px;
+        margin-bottom: 8px;
     }
 
     .player {
-        width: 105px;
+        width: 115px;
 
-        padding: 5px 4px;
+        padding: 7px 5px;
 
-        border-radius: 12px;
+        border-radius: 13px;
     }
 
     .player h3 {
-        margin-bottom: 2px;
+        margin-bottom: 3px;
 
-        font-size: 12px;
+        font-size: 13px;
     }
 
     .player div {
-        font-size: 34px;
+        font-size: 37px;
 
-        height: 38px;
+        height: 42px;
     }
 
     .player p {
-        margin: 2px 0 0;
+        margin: 3px 0 0;
 
         font-size: 10px;
     }
 
     .colon {
-        font-size: 19px;
+        font-size: 20px;
     }
 
 
     /* CHOICE SECTION */
 
     .choice-section {
-        padding: 7px;
+        padding: 9px 8px;
 
-        margin: 5px 0;
+        margin: 7px 0;
 
-        border-radius: 12px;
+        border-radius: 13px;
     }
 
     .choice-section h2 {
-        margin: 0 0 5px;
+        margin: 0 0 6px;
 
-        font-size: 15px;
+        font-size: 16px;
     }
 
 
     /* CHOICE BUTTONS */
 
     .choices {
-        gap: 4px;
+        gap: 5px;
     }
 
     .choices button {
-        width: 85%;
+        width: 88%;
 
-        min-height: 34px;
+        min-height: 38px;
 
-        padding: 5px;
+        padding: 6px;
 
-        font-size: 13px;
-
-        border-radius: 8px;
+        font-size: 14px;
     }
 
 
     /* RESULT */
 
     #result {
-        min-height: 20px;
+        min-height: 22px;
 
-        margin: 5px 0;
+        margin: 7px 0;
+
+        font-size: 15px;
+    }
+
+
+    /* SCORE */
+
+    .score {
+        gap: 25px;
+
+        margin: 6px 0;
+
+        font-size: 23px;
+    }
+
+
+    /* FINAL WINNER */
+
+    #final-winner {
+        min-height: 18px;
+
+        margin: 4px 0;
 
         font-size: 14px;
     }
 
 
-    /* SCORE */
+    /* TRY AGAIN */
+
+    #try-again {
+        margin-top: 2px;
+
+        min-height: 38px;
+
+        padding: 7px 22px;
+
+        font-size: 14px;
+    }
+}
+
+
+/* =========================
+   SMALL / SHORT PHONES
+========================= */
+
+@media (max-width: 500px) and (max-height: 700px) {
+
+    #game-screen {
+        max-height: 95vh;
+
+        padding: 9px 8px;
+    }
+
+    #game-screen h1 {
+        font-size: 19px;
+
+        margin-bottom: 5px;
+    }
+
+    .battle {
+        gap: 5px;
+
+        margin-bottom: 5px;
+    }
+
+    .player {
+        width: 108px;
+
+        padding: 5px;
+    }
+
+    .player h3 {
+        font-size: 12px;
+    }
+
+    .player div {
+        font-size: 33px;
+
+        height: 37px;
+    }
+
+    .player p {
+        font-size: 9px;
+    }
+
+    .colon {
+        font-size: 18px;
+    }
+
+    .choice-section {
+        padding: 7px;
+
+        margin: 5px 0;
+    }
+
+    .choice-section h2 {
+        font-size: 15px;
+
+        margin-bottom: 4px;
+    }
+
+    .choices {
+        gap: 4px;
+    }
+
+    .choices button {
+        min-height: 35px;
+
+        padding: 5px;
+
+        font-size: 13px;
+    }
+
+    #result {
+        margin: 5px 0;
+
+        font-size: 14px;
+    }
 
     .score {
         gap: 22px;
@@ -564,131 +676,19 @@ body {
         font-size: 21px;
     }
 
-
-    /* FINAL WINNER */
-
     #final-winner {
-        min-height: 18px;
+        min-height: 16px;
 
         margin: 3px 0;
 
         font-size: 13px;
     }
 
-
-    /* TRY AGAIN */
-
     #try-again {
-        margin-top: 2px;
-
-        min-height: 34px;
+        min-height: 35px;
 
         padding: 6px 20px;
 
         font-size: 13px;
-
-        border-radius: 9px;
-    }
-}
-
-
-/* =========================
-   VERY SHORT PHONE SCREENS
-========================= */
-
-@media (max-width: 500px) and (max-height: 700px) {
-
-    #game-screen {
-        height: 98vh;
-
-        padding: 7px 6px;
-    }
-
-    #game-screen h1 {
-        font-size: 18px;
-
-        margin-bottom: 4px;
-    }
-
-    .battle {
-        margin-bottom: 4px;
-    }
-
-    .player {
-        width: 100px;
-
-        padding: 4px;
-    }
-
-    .player h3 {
-        font-size: 11px;
-    }
-
-    .player div {
-        font-size: 30px;
-
-        height: 34px;
-    }
-
-    .player p {
-        font-size: 9px;
-    }
-
-    .colon {
-        font-size: 17px;
-    }
-
-    .choice-section {
-        padding: 5px;
-
-        margin: 4px 0;
-    }
-
-    .choice-section h2 {
-        font-size: 14px;
-
-        margin-bottom: 4px;
-    }
-
-    .choices {
-        gap: 3px;
-    }
-
-    .choices button {
-        min-height: 32px;
-
-        padding: 4px;
-
-        font-size: 12px;
-    }
-
-    #result {
-        margin: 4px 0;
-
-        font-size: 13px;
-    }
-
-    .score {
-        gap: 20px;
-
-        margin: 3px 0;
-
-        font-size: 20px;
-    }
-
-    #final-winner {
-        min-height: 16px;
-
-        margin: 2px 0;
-
-        font-size: 12px;
-    }
-
-    #try-again {
-        min-height: 32px;
-
-        padding: 5px 18px;
-
-        font-size: 12px;
     }
 }
