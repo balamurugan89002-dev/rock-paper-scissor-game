@@ -1,0 +1,664 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+
+    /* BLUE BACKGROUND */
+
+    background: linear-gradient(
+        135deg,
+        #0f172a,
+        #1d4ed8,
+        #2563eb
+    );
+
+    color: white;
+
+}
+
+
+/* =========================
+   START SCREEN
+========================= */
+
+#start-screen {
+
+    width: 90%;
+
+    max-width: 600px;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+}
+
+
+.logo {
+
+    font-size: 80px;
+
+    margin-bottom: 10px;
+
+}
+
+
+#start-screen h1 {
+
+    font-size: 40px;
+
+    letter-spacing: 3px;
+
+    margin: 10px 0;
+
+}
+
+
+#start-screen p {
+
+    letter-spacing: 2px;
+
+}
+
+
+.target {
+
+    font-size: 13px;
+
+    opacity: 0.8;
+
+}
+
+
+#start-button {
+
+    margin-top: 30px;
+
+    padding: 15px 45px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #3b82f6;
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+    box-shadow:
+        0 5px 15px
+        rgba(0, 0, 0, 0.25);
+
+}
+
+
+#start-button:hover {
+
+    background: #60a5fa;
+
+    transform: scale(1.05);
+
+}
+
+
+/* =========================
+   GAME SCREEN
+========================= */
+
+#game-screen {
+
+    display: none;
+
+    width: 90%;
+
+    max-width: 550px;
+
+    padding: 30px;
+
+    background: white;
+
+    color: #0f172a;
+
+    border-radius: 22px;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 60px
+        rgba(0, 0, 0, 0.35);
+
+}
+
+
+/* GAME TITLE */
+
+#game-screen h1 {
+
+    margin: 0 0 25px;
+
+    font-size: 30px;
+
+    letter-spacing: 2px;
+
+    color: #1d4ed8;
+
+}
+
+
+/* =========================
+   BATTLE AREA
+========================= */
+
+.battle {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 40px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.player {
+
+    width: 150px;
+
+    padding: 15px;
+
+    text-align: center;
+
+    background: #eff6ff;
+
+    border: 2px solid #bfdbfe;
+
+    border-radius: 15px;
+
+}
+
+
+.player h3 {
+
+    margin: 0 0 10px;
+
+    color: #1d4ed8;
+
+    font-size: 16px;
+
+}
+
+
+.player div {
+
+    font-size: 55px;
+
+    height: 65px;
+
+}
+
+
+.player p {
+
+    margin: 8px 0 0;
+
+    color: #1e3a8a;
+
+    font-weight: bold;
+
+    font-size: 14px;
+
+}
+
+
+.colon {
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+    color: #2563eb;
+
+}
+
+
+/* =========================
+   CHOICE SECTION
+========================= */
+
+.choice-section {
+
+    background: #dbeafe;
+
+    padding: 20px;
+
+    border-radius: 16px;
+
+    margin: 20px 0;
+
+    border: 1px solid #bfdbfe;
+
+}
+
+
+.choice-section h2 {
+
+    margin: 0 0 18px;
+
+    font-size: 20px;
+
+    color: #1e3a8a;
+
+}
+
+
+/* =========================
+   CHOICE BUTTONS
+========================= */
+
+.choices {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.choices button {
+
+    width: 220px;
+
+    min-height: 50px;
+
+    padding: 13px;
+
+    border: 2px solid #3b82f6;
+
+    border-radius: 10px;
+
+    background: white;
+
+    color: #1e3a8a;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.choices button:hover {
+
+    background: #2563eb;
+
+    color: white;
+
+    border-color: #2563eb;
+
+    transform: translateY(-2px);
+
+}
+
+
+.choices button:active {
+
+    transform: scale(0.97);
+
+}
+
+
+.choices button:disabled {
+
+    opacity: 0.5;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+}
+
+
+/* =========================
+   RESULT
+========================= */
+
+#result {
+
+    min-height: 28px;
+
+    margin: 22px 0;
+
+    font-size: 21px;
+
+    font-weight: bold;
+
+    color: #1d4ed8;
+
+}
+
+
+/* =========================
+   SCORE
+========================= */
+
+.score {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 40px;
+
+    margin: 15px 0;
+
+    font-size: 32px;
+
+    font-weight: bold;
+
+}
+
+
+.score span:first-child,
+.score span:last-child {
+
+    color: #2563eb;
+
+}
+
+
+.score span:nth-child(2) {
+
+    color: #64748b;
+
+}
+
+
+/* =========================
+   FINAL WINNER
+========================= */
+
+#final-winner {
+
+    min-height: 25px;
+
+    margin: 10px 0;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    color: #1d4ed8;
+
+}
+
+
+/* =========================
+   TRY AGAIN / NEW GAME
+========================= */
+
+#try-again {
+
+    margin-top: 5px;
+
+    padding: 13px 32px;
+
+    min-height: 50px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+    box-shadow:
+        0 5px 12px
+        rgba(37, 99, 235, 0.3);
+
+}
+
+
+#try-again:hover {
+
+    background: #1d4ed8;
+
+    transform: scale(1.05);
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+    body {
+
+        padding: 15px;
+
+    }
+
+
+    #start-screen {
+
+        width: 100%;
+
+    }
+
+
+    #start-screen h1 {
+
+        font-size: 30px;
+
+    }
+
+
+    .logo {
+
+        font-size: 65px;
+
+    }
+
+
+    #game-screen {
+
+        width: 100%;
+
+        padding: 20px 15px;
+
+        border-radius: 18px;
+
+    }
+
+
+    #game-screen h1 {
+
+        font-size: 25px;
+
+    }
+
+
+    /* YOU VS COMPUTER */
+
+    .battle {
+
+        gap: 8px;
+
+        margin-bottom: 20px;
+
+    }
+
+
+    .player {
+
+        width: 120px;
+
+        padding: 12px 8px;
+
+    }
+
+
+    .player div {
+
+        font-size: 45px;
+
+        height: 55px;
+
+    }
+
+
+    .player h3 {
+
+        font-size: 14px;
+
+    }
+
+
+    .player p {
+
+        font-size: 12px;
+
+    }
+
+
+    .colon {
+
+        font-size: 25px;
+
+    }
+
+
+    /* CHOICE SECTION */
+
+    .choice-section {
+
+        padding: 16px 10px;
+
+    }
+
+
+    .choice-section h2 {
+
+        font-size: 18px;
+
+    }
+
+
+    /* BUTTONS */
+
+    .choices {
+
+        gap: 12px;
+
+    }
+
+
+    .choices button {
+
+        width: 90%;
+
+        max-width: 300px;
+
+        min-height: 52px;
+
+        padding: 14px;
+
+        font-size: 17px;
+
+    }
+
+
+    /* RESULT */
+
+    #result {
+
+        font-size: 19px;
+
+    }
+
+
+    /* SCORE */
+
+    .score {
+
+        gap: 35px;
+
+        font-size: 30px;
+
+    }
+
+
+    /* TRY AGAIN */
+
+    #try-again {
+
+        min-height: 52px;
+
+        padding: 14px 30px;
+
+        font-size: 16px;
+
+    }
+
+}

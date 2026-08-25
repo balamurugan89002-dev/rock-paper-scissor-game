@@ -1,0 +1,14 @@
+{
+  "name": "rock-paper-scissor",
+  "version": "1.0.0",
+  "description": "Rock Paper Scissors game using JavaScript, Python and Pyodide",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^8.2.2"
+  }
+}
