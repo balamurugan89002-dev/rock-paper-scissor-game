@@ -6,26 +6,25 @@
     box-sizing: border-box;
 }
 
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
 
 /* =========================
    BODY
 ========================= */
 
 body {
-
-    margin: 0;
-
-    min-height: 100vh;
-
     display: flex;
-
     justify-content: center;
-
     align-items: center;
 
     font-family: Arial, sans-serif;
-
-    /* BLUE BACKGROUND */
 
     background: linear-gradient(
         135deg,
@@ -35,7 +34,6 @@ body {
     );
 
     color: white;
-
 }
 
 
@@ -44,97 +42,62 @@ body {
 ========================= */
 
 #start-screen {
-
     width: 90%;
-
     max-width: 600px;
-
-    min-height: 100vh;
+    height: 100vh;
 
     display: flex;
-
     flex-direction: column;
-
     justify-content: center;
-
     align-items: center;
 
     text-align: center;
-
+    padding: 20px;
 }
-
 
 .logo {
-
-    font-size: 80px;
-
-    margin-bottom: 10px;
-
+    font-size: clamp(50px, 8vw, 80px);
+    margin-bottom: 5px;
 }
-
 
 #start-screen h1 {
-
-    font-size: 40px;
-
+    font-size: clamp(28px, 4vw, 40px);
     letter-spacing: 3px;
-
-    margin: 10px 0;
-
+    margin: 8px 0;
 }
-
 
 #start-screen p {
-
     letter-spacing: 2px;
-
+    margin: 8px 0;
 }
-
 
 .target {
-
     font-size: 13px;
-
     opacity: 0.8;
-
 }
 
-
 #start-button {
-
-    margin-top: 30px;
-
-    padding: 15px 45px;
+    margin-top: 20px;
+    padding: 12px 35px;
 
     border: none;
-
     border-radius: 12px;
 
     background: #3b82f6;
-
     color: white;
 
-    font-size: 18px;
-
+    font-size: 17px;
     font-weight: bold;
 
     cursor: pointer;
-
     transition: 0.2s;
 
-    box-shadow:
-        0 5px 15px
-        rgba(0, 0, 0, 0.25);
-
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
 }
 
-
 #start-button:hover {
-
     background: #60a5fa;
-
     transform: scale(1.05);
-
 }
 
 
@@ -143,42 +106,35 @@ body {
 ========================= */
 
 #game-screen {
-
     display: none;
 
-    width: 90%;
+    width: min(90%, 550px);
+    max-height: 95vh;
 
-    max-width: 550px;
-
-    padding: 30px;
+    padding: clamp(18px, 3vw, 30px);
 
     background: white;
-
     color: #0f172a;
 
     border-radius: 22px;
 
     text-align: center;
 
-    box-shadow:
-        0 20px 60px
-        rgba(0, 0, 0, 0.35);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
 
+    overflow: hidden;
 }
 
 
 /* GAME TITLE */
 
 #game-screen h1 {
+    margin: 0 0 15px;
 
-    margin: 0 0 25px;
-
-    font-size: 30px;
+    font-size: clamp(24px, 4vw, 30px);
 
     letter-spacing: 2px;
-
     color: #1d4ed8;
-
 }
 
 
@@ -187,25 +143,20 @@ body {
 ========================= */
 
 .battle {
-
     display: flex;
 
     justify-content: center;
-
     align-items: center;
 
-    gap: 40px;
+    gap: clamp(10px, 5vw, 40px);
 
-    margin-bottom: 25px;
-
+    margin-bottom: 15px;
 }
 
-
 .player {
+    width: 140px;
 
-    width: 150px;
-
-    padding: 15px;
+    padding: 10px;
 
     text-align: center;
 
@@ -214,51 +165,35 @@ body {
     border: 2px solid #bfdbfe;
 
     border-radius: 15px;
-
 }
-
 
 .player h3 {
-
-    margin: 0 0 10px;
+    margin: 0 0 5px;
 
     color: #1d4ed8;
-
-    font-size: 16px;
-
+    font-size: 15px;
 }
-
 
 .player div {
-
-    font-size: 55px;
-
-    height: 65px;
-
+    font-size: 45px;
+    height: 55px;
 }
 
-
 .player p {
-
-    margin: 8px 0 0;
+    margin: 5px 0 0;
 
     color: #1e3a8a;
 
     font-weight: bold;
-
-    font-size: 14px;
-
+    font-size: 13px;
 }
 
-
 .colon {
-
-    font-size: 30px;
+    font-size: 25px;
 
     font-weight: bold;
 
     color: #2563eb;
-
 }
 
 
@@ -267,28 +202,23 @@ body {
 ========================= */
 
 .choice-section {
-
     background: #dbeafe;
 
-    padding: 20px;
+    padding: 15px;
 
     border-radius: 16px;
 
-    margin: 20px 0;
+    margin: 12px 0;
 
     border: 1px solid #bfdbfe;
-
 }
 
-
 .choice-section h2 {
+    margin: 0 0 12px;
 
-    margin: 0 0 18px;
-
-    font-size: 20px;
+    font-size: 18px;
 
     color: #1e3a8a;
-
 }
 
 
@@ -297,25 +227,21 @@ body {
 ========================= */
 
 .choices {
-
     display: flex;
 
     flex-direction: column;
 
     align-items: center;
 
-    gap: 10px;
-
+    gap: 7px;
 }
 
-
 .choices button {
+    width: min(220px, 90%);
 
-    width: 220px;
+    min-height: 42px;
 
-    min-height: 50px;
-
-    padding: 13px;
+    padding: 9px;
 
     border: 2px solid #3b82f6;
 
@@ -325,19 +251,16 @@ body {
 
     color: #1e3a8a;
 
-    font-size: 17px;
+    font-size: 15px;
 
     font-weight: bold;
 
     cursor: pointer;
 
     transition: 0.2s;
-
 }
 
-
 .choices button:hover {
-
     background: #2563eb;
 
     color: white;
@@ -345,25 +268,18 @@ body {
     border-color: #2563eb;
 
     transform: translateY(-2px);
-
 }
-
 
 .choices button:active {
-
     transform: scale(0.97);
-
 }
 
-
 .choices button:disabled {
-
     opacity: 0.5;
 
     cursor: not-allowed;
 
     transform: none;
-
 }
 
 
@@ -372,17 +288,15 @@ body {
 ========================= */
 
 #result {
+    min-height: 25px;
 
-    min-height: 28px;
+    margin: 12px 0;
 
-    margin: 22px 0;
-
-    font-size: 21px;
+    font-size: 18px;
 
     font-weight: bold;
 
     color: #1d4ed8;
-
 }
 
 
@@ -391,36 +305,27 @@ body {
 ========================= */
 
 .score {
-
     display: flex;
 
     justify-content: center;
-
     align-items: center;
 
-    gap: 40px;
+    gap: 35px;
 
-    margin: 15px 0;
+    margin: 10px 0;
 
-    font-size: 32px;
+    font-size: 28px;
 
     font-weight: bold;
-
 }
-
 
 .score span:first-child,
 .score span:last-child {
-
     color: #2563eb;
-
 }
 
-
 .score span:nth-child(2) {
-
     color: #64748b;
-
 }
 
 
@@ -429,31 +334,28 @@ body {
 ========================= */
 
 #final-winner {
+    min-height: 22px;
 
-    min-height: 25px;
+    margin: 7px 0;
 
-    margin: 10px 0;
-
-    font-size: 20px;
+    font-size: 18px;
 
     font-weight: bold;
 
     color: #1d4ed8;
-
 }
 
 
 /* =========================
-   TRY AGAIN / NEW GAME
+   TRY AGAIN
 ========================= */
 
 #try-again {
+    margin-top: 3px;
 
-    margin-top: 5px;
+    padding: 10px 28px;
 
-    padding: 13px 32px;
-
-    min-height: 50px;
+    min-height: 42px;
 
     border: none;
 
@@ -463,7 +365,7 @@ body {
 
     color: white;
 
-    font-size: 16px;
+    font-size: 15px;
 
     font-weight: bold;
 
@@ -471,194 +373,37 @@ body {
 
     transition: 0.2s;
 
-    box-shadow:
-        0 5px 12px
-        rgba(37, 99, 235, 0.3);
-
+    box-shadow: 0 5px 12px rgba(37, 99, 235, 0.3);
 }
 
-
 #try-again:hover {
-
     background: #1d4ed8;
 
     transform: scale(1.05);
-
 }
 
 
 /* =========================
-   MOBILE
+   SMALL SCREENS
 ========================= */
 
 @media (max-width: 500px) {
 
     body {
-
-        padding: 15px;
-
+        padding: 10px;
     }
-
-
-    #start-screen {
-
-        width: 100%;
-
-    }
-
-
-    #start-screen h1 {
-
-        font-size: 30px;
-
-    }
-
-
-    .logo {
-
-        font-size: 65px;
-
-    }
-
 
     #game-screen {
-
         width: 100%;
+        max-height: 96vh;
 
-        padding: 20px 15px;
+        padding: 15px 10px;
 
         border-radius: 18px;
-
     }
-
 
     #game-screen h1 {
-
-        font-size: 25px;
-
+        font-size: 23px;
     }
 
-
-    /* YOU VS COMPUTER */
-
-    .battle {
-
-        gap: 8px;
-
-        margin-bottom: 20px;
-
-    }
-
-
-    .player {
-
-        width: 120px;
-
-        padding: 12px 8px;
-
-    }
-
-
-    .player div {
-
-        font-size: 45px;
-
-        height: 55px;
-
-    }
-
-
-    .player h3 {
-
-        font-size: 14px;
-
-    }
-
-
-    .player p {
-
-        font-size: 12px;
-
-    }
-
-
-    .colon {
-
-        font-size: 25px;
-
-    }
-
-
-    /* CHOICE SECTION */
-
-    .choice-section {
-
-        padding: 16px 10px;
-
-    }
-
-
-    .choice-section h2 {
-
-        font-size: 18px;
-
-    }
-
-
-    /* BUTTONS */
-
-    .choices {
-
-        gap: 12px;
-
-    }
-
-
-    .choices button {
-
-        width: 90%;
-
-        max-width: 300px;
-
-        min-height: 52px;
-
-        padding: 14px;
-
-        font-size: 17px;
-
-    }
-
-
-    /* RESULT */
-
-    #result {
-
-        font-size: 19px;
-
-    }
-
-
-    /* SCORE */
-
-    .score {
-
-        gap: 35px;
-
-        font-size: 30px;
-
-    }
-
-
-    /* TRY AGAIN */
-
-    #try-again {
-
-        min-height: 52px;
-
-        padding: 14px 30px;
-
-        font-size: 16px;
-
-    }
-
-}
+    .
